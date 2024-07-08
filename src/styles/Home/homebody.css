@@ -1,0 +1,44 @@
+.look {
+  font-family: "Margarine", sans-serif;
+  font-weight: 500;
+}
+.fashion {
+  z-index: 1;
+}
+.fashion::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 250px;
+  height: 50px;
+  background-color: #ffff00;
+  z-index: -1;
+  left: -10px;
+  border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -webkit-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -moz-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -ms-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -o-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+}
+.rol {
+  grid-auto-rows: auto;
+}
+
+.style {
+  z-index: 1;
+}
+.style::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 180px;
+    height: 60px;
+    background-color: white;
+    z-index: -1;
+    left: -10px;
+    border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+    -webkit-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+    -moz-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+    -ms-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+    -o-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  }
