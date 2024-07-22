@@ -1,0 +1,8 @@
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,10px));
+  gap:3rem;
+  place-items:center;
+  place-content:center;
+}

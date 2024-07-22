@@ -2,6 +2,11 @@
   font-family: "Margarine", sans-serif;
   font-weight: 500;
 }
+.grided{
+  display:grid;
+  grid-template-columns:600px 550px;
+ 
+}
 .fashion {
   z-index: 1;
 }

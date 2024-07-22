@@ -2,10 +2,10 @@ import woman from "../../assets/Images/woman2.png";
 import "../../styles/Home/homebody.css"
 const HomeBody = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="grid grid-cols-2 rol items-center justify-center bg-gray-200 w-[100%] px-40  h-[90vh]">
-        <div className="flex flex-col gap-4 border-2 ">
-          <h1 className="flex flex-col text-[90px] leading-[92px] look">
+    <div className="flex items-center justify-center overflow-hidden">
+      <div className=" grided rol  justify-center bg-gray-200 w-[100%] px-40  ">
+        <div className="flex flex-col gap-4 border-2 py-16 pl-20">
+          <h1 className="flex flex-col text-[110px] leading-[100px] look">
             <span className="fashion relative">Fashion</span>
             <span>Fades,</span>
             <span className="style relative">Style</span>
@@ -16,11 +16,11 @@ const HomeBody = () => {
           </button>
         </div>
 
-        <div className="self-end">
+        <div className="self-end w-[100%] h-[100%]">
           <img
             src={woman}
             alt="a picture of three women"
-            className=""
+            className="w-[100%] h-[100%]"
           />
         </div>
       </div>
