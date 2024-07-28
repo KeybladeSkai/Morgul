@@ -4,12 +4,18 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Features = () => {
   return (
-    <div className="features pt-[9rem] bg-gray-200 ">
-      <h1 className="font-extrabold flex flex-col gap-8 items-center justify-center text-[3rem]">
-        <span className="self-start fashion relative look text font-extrabold">
+    <div
+      className="  col-span-12
+  overflow-hidden
+  features pt-[4rem]
+  bg-gray-200 grid px-4 md:grid-cols-custom-2 lg:grid-cols-custom auto-rows-min border-2 place-items-center 
+  gap-20"
+    >
+      <h1 className="items-self-start font-extrabold flex flex-col md:gap-8 items-center justify-self text-2xl md:text-[3rem]">
+        <span className="md:self-start look text font-extrabold">
           MORGUL up
         </span>
-        <span className="self-end style relative look font-extrabold">
+        <span className=" relative self-end  look font-extrabold text-4xl">
           with top picks
         </span>
       </h1>
@@ -20,11 +26,7 @@ const Features = () => {
             className="mb-4 w-[100%] h-[100%] flex flex-col gap-2 rounded-4xl "
           >
             <div className="rounded-3xl overflow-hidden cursor-pointer">
-              <img
-                src={feature.img}
-                alt=""
-                className="w-[100%] h-[100%] object-cover"
-              />
+              <img src={feature.img} alt="" className="w-[100%] h-[100%] " />
             </div>
           </div>
 
@@ -37,6 +39,17 @@ const Features = () => {
           </div>
         </div>
       ))}
+      <h1 className="font-extrabold flex flex-col gap-2 items-center justify-center text-[3rem]">
+        <span className="self-start fashion relative look text font-extrabold">
+          Explore Now
+        </span>
+
+        <button className="text-[1rem] md:text-[16px] font-normal flex items-center">
+          <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
+            Shop now
+          </button>
+        </button>
+      </h1>
     </div>
   );
 };

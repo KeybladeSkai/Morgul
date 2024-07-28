@@ -5,7 +5,6 @@
 .features{
     padding-bottom:8rem;
     display:grid;
-    grid-template-columns:repeat(2,400px);
     grid-auto-rows:500px;
     column-gap:5rem;
     row-gap:5rem;

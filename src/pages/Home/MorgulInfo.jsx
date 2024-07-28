@@ -2,12 +2,25 @@ import boy from "../../assets/Images/boy.png";
 import "../../styles/MorgulInfo/MorgulInfo.css";
 const MorgulInfo = () => {
   return (
-    <div className="morgulInfo items-center justify-center">
-      
-      <div className="w-[100%] h-[100%]">
-        <img src={boy} alt="a girl" className="" />
-      </div>
-      <div className="flex flex-col gap-2">
+    <div
+      className="
+    col-span-12 
+    flex
+    justify-center
+    items-center
+    morgulInfo 
+"
+    >
+      <img
+        src={boy}
+        alt="a girl"
+        className="
+        w-[500px]
+        border-2 border-black
+         object-cover"
+      />
+
+      <div className="flex flex-col gap-2 border-2 border-black">
         <h1 className="mb-4 text-[160px] leading  DynaPuff font-bold ">
           Flash Sales
         </h1>

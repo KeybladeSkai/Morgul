@@ -6,7 +6,7 @@ import { IoLogoReddit } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-black text-white  p-12">
+    <div className="p-3 col-span-12 flex flex-col bg-black text-white md:p-6 lg:p-12">
       <div className="bg-black pt-10 pb-10 grid footer text-sm">
         <div className="flex flex-col gap-3 text-sm">
           <h1 className="text-2xl font-bold  flex flex-col">MORGUL</h1>

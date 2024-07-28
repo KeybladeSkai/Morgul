@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridAutoRows: {
+        '500': '600px',
+      },
+      gridTemplateColumns: {
+        'custom': ' repeat(2,400px)',
+        'custom-2': 'repeat(2,350px)'
+
+      },
+    },
   },
   plugins: [],
 }

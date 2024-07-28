@@ -6,29 +6,30 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ShowGrid = () => {
   return (
-    <div className=" mt-14 showGrid mb-20 gap-2 justify-center">
-      <div className="border-2 border-black image-grid-col-2 image-grid-row-2 ">
-        <img src={billie} alt="" className="" />
+    <div className="overflow-hidden w-[100vw] gap-y-12 gap-x-4  px-10 col-span-12 grid md:grid-cols-12  mt-14  md:gap-4 justify-center lg:grid-rows-[600px] md:grid-rows-[400px] mb-10">
+      <div className="row-span-2 col-span-6 rounded-xl overflow-hidden">
+        <img src={billie} alt="" className="rounded-xl" />
       </div>
-      <div className="border-2 border-black">
-        <img src={justin} alt="" className="" />
+      <div className=" col-span col-span-3 ">
+        <img src={justin} alt="" className="rounded-xl " />
       </div>
-      <div className="border-2 border-black ">
-        <img src={katy} alt="" className="" />
+      <div className="col-span-3">
+        <img src={katy} alt="" className="rounded-xl " />
       </div>
-      <div className=" image-grid-col-2 flex justify-center items-center text-[4rem] font-extrabold gap-2 flex-col mx-12">
-        <span className="self-start fashion relative look font-extrabold">Top artist </span>
-        <span className="self-end fashion relative look font-extrabold">
-            wear MORGUL
+
+      <div className="col-start-7 col-end-[-1] flex justify-center items-center md:text-[2rem] lg:text-[3rem] text-[3rem] font-extrabold gap-2 flex-col  mt-12 md:mx-12">
+        <span className="md:self-start fashion relative look font-extrabold">
+          Top artist{" "}
         </span>
-        <button className="text-[16px] font-normal flex items-center">
-        <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
-              Shop now
-            </button>
-         
+        <span className="md:text-md md:self-end fashion relative look font-extrabold">
+          wear MORGUL
+        </span>
+        <button className="text-[1rem] md:text-[16px] font-normal flex items-center">
+          <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
+            Shop now
+          </button>
         </button>
       </div>
-    
     </div>
   );
 };

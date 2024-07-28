@@ -19,19 +19,55 @@
     
 }
 
-.image-grid-col-2{
-    grid-column:span 2
+
+.fashion {
+  z-index: 1;
 }
-.image-grid-row-2{
-    grid-row:span 2
+.fashion::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 250px;
+  height: 50px;
+  background-color: #ffff00;
+  
+  z-index: -1;
+  left: -10px;
+  border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -webkit-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -moz-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -ms-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -o-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
 }
+
+
+.style {
+  z-index: 1;
+}
+.style::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 180px;
+  height: 60px;
+  background-color: white;
+  z-index: -1;
+  left: -10px;
+  border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -webkit-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -moz-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -ms-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+  -o-border-radius: 67% 33% 0% 100% / 60% 43% 57% 40%;
+}
+
+
 .art{
     background-color:grey
 }
 
 @media screen and (max-width:1024px){
-    .showGrid{
-        grid-template-columns:repeat(2,1fr);
-        grid-auto-rows:200px;
+    .fashion::before {
+        width: 150px;
+      
     }
 }

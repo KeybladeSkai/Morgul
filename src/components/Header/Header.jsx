@@ -1,29 +1,35 @@
 import { BsCart3 } from "react-icons/bs";
 import { IoMdContact } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { FiMenu } from "react-icons/fi";
+import "../../styles/Header/header.css";
 const Header = () => {
   return (
-    <div className="flex justify-around items-center p-4 bg-white  border-[1px] border-b-gray-300 ">
+    <div className="w-[100vw] overflow-hidden px-6 border-[1px] border-b-slate-400 col-span-12 flex justify-between items-center text-black z-50 py-4 md:px-14 md:justify-around bg-white shadow">
       <Link to="/">
-        <h1 className="text-3xl font-bold">MORGUL</h1>
+        <h1 className="text-2xl font-extrabold ">MORGUL</h1>
       </Link>
-      <div className="flex gap-6 cursor-pointer justify-center items-center">
-        <Link to="newCollection">
-          <h2 className="hover:underline py-1 px-2">New Collection</h2>
+
+      <div className="hidden lg:flex gap-6 cursor-pointer justify-center items-center sm:hidden">
+        <Link to="/newCollection">
+          <h2 className="hover:underline py-1 px-2 ">
+            Collections
+          </h2>
         </Link>
         <h2 className="hover:underline">Artist wears</h2>
-        <h2 className="hover:underline">Men</h2>
-        <h2 className="hover:underline">Women</h2>
-        <h2 className="hover:underline">Kids</h2>
+
+ 
       </div>
-      <input
+      {/* <input
         type="text"
-        className="border-[1px] border-gray-800 p-r-2 pl-4 py-[2px] rounded-full placeholder:text-sm"
+        className="hidden lg:block border-[1px] border-gray-800 p-r-2 pl-4 py-[2px] rounded-full placeholder:text-sm"
         placeholder="search for product"
-      />
-      <div className="flex gap-4 justify-center items-center">
-        <BsCart3 className="text-xl" />
-        <IoMdContact className="text-2xl" />
+      /> */}
+
+      <div className="cursor-pointer flex gap-4 justify-center items-center">
+        <BsCart3 className="text-xl cursor-pointer md:block lg:block block" />
+        <IoMdContact className="hidden text-2xl cursor-pointer md:block" />
+        <FiMenu className="cursor-pointer text-2xl block sm:block lg:hidden" />
       </div>
     </div>
   );

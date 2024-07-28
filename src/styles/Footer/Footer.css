@@ -3,6 +3,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,10px));
   gap:3rem;
-  place-items:center;
+
   place-content:center;
+}
+
+
+@media (max-width:640px){
+  .footer{
+    place-items:start;
+    place-content:start;
+  }
 }
