@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SideBar = ({ setMenu }) => {
   return (
-    <div className="fixed z-[1000] overflow-hidden ">
+    <div className="fixed h-screen z-[1000] overflow-hidden ">
       <div className="pointer-events-none fixed  inset-0 bg-gray-500 bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"></div>
 
       <div className="overflow-hidden fixed inset-0">
