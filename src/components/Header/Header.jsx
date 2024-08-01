@@ -20,7 +20,7 @@ const Header = () => {
   }, [menu]);
 
   return (
-    <div className="z-[1000] w-[100vw] overflow-hidden px-6 border-[1px] border-b-slate-100 col-span-12 flex justify-between items-center text-black py-4 md:px-14 md:justify-around bg-white shadow">
+    <div className="relative z-[1000] w-[100vw] overflow-hidden px-6 border-[1px] border-b-slate-100 col-span-12 flex justify-between items-center text-black py-4 md:px-14 md:justify-around bg-white shadow">
       <Link to="/">
         <h1 className="text-2xl font-extrabold ">MORGUL</h1>
       </Link>
