@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../../styles/ProductGrid/ProductGrid.css";
 import { BsHandbag } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
+import { CartContext } from "../../context/CartContext";
 
 const ProductGrid = ({ data }) => {
   const [CheckInput, setCheckInput] = useState(false);
@@ -37,6 +38,9 @@ const ProductGrid = ({ data }) => {
     setCheckInput(false);
     console.log(filteredItems);
   };
+
+  const GlobalState = useContext(CartContext);
+  const dispatch = GlobalState.dispatch;
 
   return (
     <div className=" mx-auto my-8 md:my-[5rem] px-[2rem] max-w-[1200px] flex flex-col gap-10">
@@ -85,7 +89,7 @@ const ProductGrid = ({ data }) => {
                   className="object-contain w-[70%] h-[auto]"
                 />
                 <button
-                  onClick={() => addToCart(item)}
+                  onClick={() => dispatch({ type: "ADD", payload: item })}
                   className="
                    cursor-pointer
                   hover:bg-black
@@ -99,7 +103,8 @@ const ProductGrid = ({ data }) => {
 
               <div className="flex flex-col items-center justify-center gap-2">
                 <h2 className="uppercase font-bold">{item.name}</h2>
-                <p className="text-opacity">{item.price}</p>
+                <p className="text-opacity">N{item.price.toLocaleString()}</p>
+                {/* adding comma format to an init */}
               </div>
             </div>
           ))

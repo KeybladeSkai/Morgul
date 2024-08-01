@@ -54,10 +54,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-around items-center text-sm">
+      <div className="flex justify-between md:justify-around items-center text-sm">
         <h3 className="flex gap-2 text-sm items-center justify-center">
           <div className="flex items-center justify-center">
-            <span className="text-sm">@</span>
+            <span className="text-sm">©</span>
             <span className="text-sm">2024</span>
           </div>
           <span className="text-sm">MORGUL</span>

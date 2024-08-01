@@ -17,7 +17,7 @@ const ShowGrid = () => {
         <img src={katy} alt="" className="rounded-xl " />
       </div>
 
-      <div className="col-start-7 col-end-[-1] flex justify-center items-center md:text-[2rem] lg:text-[3rem] text-[3rem] font-extrabold gap-2 flex-col  mt-12 md:mx-12">
+      <div className="col-start-7 col-end-[-1] flex justify-center items-center md:text-[2rem] lg:text-[3rem] font-extrabold gap-2 flex-col  text-[2.5rem] md:mx-12">
         <span className="md:self-start fashion relative look font-extrabold">
           Top artist{" "}
         </span>

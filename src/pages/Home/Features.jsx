@@ -46,7 +46,7 @@ const Features = () => {
 
         <button className="text-[1rem] md:text-[16px] font-normal flex items-center">
           <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
-            Shop now
+            Shop
           </button>
         </button>
       </h1>
