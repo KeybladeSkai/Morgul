@@ -36,7 +36,7 @@ const SideBar = ({ setMenu }) => {
               </li>
             </ul>
           </div>
-          <button className="mt-auto mb-6 text-xl bg-black text-white py-4 px-6 rounded-lg flex items-center gap-2">
+          <button className="mt-auto mb-6 text-xl bg-black text-white py-4 px-6 rounded-lg flex items-center gap-2">pu
             <CgProfile className="text-2xl" />
             <h1 className="text-2xl">Sign in</h1>
           </button>

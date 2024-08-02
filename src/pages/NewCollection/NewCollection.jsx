@@ -6,7 +6,7 @@ import Footer from "../Home/Footer";
 const NewCollection = () => {
 
   return (
-    <div className="w-full bg-slate-100">
+    <div className="w-full bg-slate-100 relative">
       <Header />
       <ProductGrid data={collection}/>
       <Footer/>

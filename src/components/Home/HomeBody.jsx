@@ -18,7 +18,7 @@ const HomeBody = () => {
       <img
         src={woman}
         alt="a picture of three women"
-        className="md-[800px] lg:w-[550px] object-contain"
+        className="md-[100%px] lg:w-[50%] object-contain"
       />
     </div>
   );

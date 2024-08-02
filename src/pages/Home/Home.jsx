@@ -15,7 +15,7 @@ useState;
 
 const Home = () => {
   return (
-    <div className="w-[100vw] min-h-[100vh] grid grid-cols-12 overflow-y-auto overflow-x-hidden">
+    <div className="relative w-[100vw] min-h-[100vh] grid grid-cols-12 overflow-y-auto overflow-x-hidden">
       <Header />
       <HomeBody />
       <Morgul />
