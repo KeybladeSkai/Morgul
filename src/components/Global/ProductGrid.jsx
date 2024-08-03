@@ -119,8 +119,8 @@ const ProductGrid = ({ data }) => {
                    cursor-pointer
                    outline-none
                    active:bg-black
-                  hover:bg-black
-                  hover:text-white
+                  transition-colors duration-1
+                  active:text-white
                          flex gap-2 justify-center items-center w-[80%]  absolute bottom-4 rounded py-2 bg-[#fff000] "
                   >
                     <BsHandbag />
