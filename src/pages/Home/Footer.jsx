@@ -6,8 +6,10 @@ import { IoLogoReddit } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <div className="p-3 col-span-12 flex flex-col bg-black text-white md:p-6 lg:p-12">
-      <div className="bg-black pt-10 pb-10 grid footer text-sm">
+    <div className="col-span-12  bg-black text-white md:p-6 lg:p-12">
+      <div className="bg-black p-2 pt-10 pb-10 grid 
+      sm:items-center sm:justify-center
+      footer text-sm">
         <div className="flex flex-col gap-3 text-sm">
           <h1 className="text-2xl font-bold  flex flex-col">MORGUL</h1>
           <div className="flex flex-col gap-3">
@@ -54,8 +56,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between md:justify-around items-center text-sm">
-        <h3 className="flex gap-2 text-sm items-center justify-center">
+      <div className="flex gap-2 flex-col sm:justify-around sm:flex-row md:justify-around md:items-center text-sm">
+        <h3 className="flex gap-2 text-sm items-center">
           <div className="flex items-center justify-center">
             <span className="text-sm">©</span>
             <span className="text-sm">2024</span>

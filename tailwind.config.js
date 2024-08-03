@@ -14,6 +14,9 @@ export default {
         'custom-2': 'repeat(2,350px)'
 
       },
+      screens:{
+        ssm:'480px'
+      }
     },
   },
   plugins: [],
