@@ -1,5 +1,5 @@
 import { ImGift } from "react-icons/im";
-import green from "../../assets/Images/newCollection/green.png"
+import cloth from "../../assets/Images/newCollection/cloth.webp"
 import bag from "../../assets/Images/newCollection/bag.png"
 import shoe1 from "../../assets/Images/newCollection/shoe1.png"
 import chakra from "../../assets/Images/newCollection/chakra.png"
@@ -15,10 +15,10 @@ import heels from "../../assets/Images/newCollection/heels.png"
 export const collection = [
   {
     id:1,
-    img:green,
+    img:cloth,
     num: 1,
     price: 15000,
-    name: "zoey styles ",
+    name: "Leather Patch Hoodie  ",
     quantity:1,
   },
   {
@@ -26,7 +26,7 @@ export const collection = [
     img:bag,
     num: 2,
     price: 25000,
-    name: "Andrew styles ",
+    name: "Dopp styles ",
     quantity:1,
   },
 
@@ -35,7 +35,7 @@ export const collection = [
     img:shoe1,
     num: 3,
     price: 22000,
-    name: "Billie styles ",
+    name: "JackSon Bays ",
     quantity:1,
   },
   {
@@ -52,7 +52,7 @@ export const collection = [
     img:glasses,
     num: 5,
     price: 10000,
-    name: "Daniel ",
+    name: "Daniela Reves shades  ",
     quantity:1,
   },
 
@@ -61,7 +61,7 @@ export const collection = [
     img:carhatt,
     num: 6,
     price: 10000,
-    name: "Jessica ",
+    name: "Minimalist Cross Bag ",
     quantity:1,
   },
 
@@ -70,7 +70,7 @@ export const collection = [
     img:heels,
     num: 7,
     price: 8000,
-    name: "Olivia ",
+    name: "Olivia Sauce ",
     quantity:1,
   },
 
@@ -79,7 +79,7 @@ export const collection = [
     img:verdusa,
     num: 8,
     price: 9000,
-    name: "Michael",
+    name: "White velta ",
     quantity:1,
   },
 ];

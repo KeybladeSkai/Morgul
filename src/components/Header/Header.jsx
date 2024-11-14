@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <div className="relative z-[1000] w-[100vw] overflow-hidden px-6 border-[1px] border-b-slate-100 col-span-12 flex justify-between items-center text-black py-4 md:px-14 md:justify-around bg-white shadow">
       <Link to="/">
-        <h1 className="text-2xl font-extrabold ">MORGUL</h1>
+        <h1 className="text-2xl font-extrabold">MORGUL</h1>
       </Link>
 
       <div className="hidden lg:flex gap-6 cursor-pointer justify-center items-center sm:hidden">
@@ -38,8 +38,9 @@ const Header = () => {
       /> */}
 
       <div className="cursor-pointer flex gap-4 justify-center items-center">
-        <button onClick={() => setOpen((prev) => !prev)}>
+        <button onClick={() => setOpen((prev) => !prev)} className="relative">
           <BsCart3 className="text-xl cursor-pointer md:block lg:block block" />
+          <div className="red w-[15px] h-[15px] bg-[#fff000] rounded-full absolute top-[-5px] right-[-5px] text-[.5rem] text-center flex justify-center items-center ">1</div>
         </button>
         <IoMdContact className="hidden text-2xl cursor-pointer md:block" />
         <button

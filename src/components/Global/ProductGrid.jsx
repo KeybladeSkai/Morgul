@@ -103,14 +103,14 @@ const ProductGrid = ({ data }) => {
             filteredItems.map((item, id) => (
               <div key={id} className="flex flex-col gap-4  ">
                 <div
-                  className="overflow-hidden relative  bg-white w-[100%] h-[400px] flex flex-col  justify-center items-center shadow
-                hover:shadow-2xl
+                  className="overflow-hidden relative  bg-white w-[100%] h-[300px] flex flex-col  justify-center items-center shadow
+                hover:shadow-md
                 hover:shadow-gray-400 "
                   key={id}
                 >
                   <img
                     src={item.img}
-                    className="object-contain w-[70%] h-[auto]"
+                    className="object-contain w-[60%] h-[auto]"
                   />
                   <button
                     ref={cartRef}
