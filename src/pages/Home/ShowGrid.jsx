@@ -3,6 +3,7 @@ import billie from "../../assets/Images/billie.jpeg";
 import justin from "../../assets/Images/justin.jpeg";
 import katy from "../../assets/Images/katy.jpeg";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const ShowGrid = () => {
   return (
@@ -25,9 +26,11 @@ const ShowGrid = () => {
           wear MORGUL
         </span>
         <button className="text-[1rem] md:text-[16px] font-normal flex items-center">
-          <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
-            Shop now
-          </button>
+          <Link to="/newCollection">
+            <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
+              Shop now
+            </button>
+          </Link>
         </button>
       </div>
     </div>

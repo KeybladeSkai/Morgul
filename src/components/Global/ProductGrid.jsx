@@ -4,6 +4,8 @@ import { BsHandbag } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { CartContext } from "../../context/CartContext";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 
 const ProductGrid = ({ data }) => {
   const cartRef = useRef();
@@ -11,16 +13,7 @@ const ProductGrid = ({ data }) => {
   const [CheckInput, setCheckInput] = useState(false);
   const [filteredItems, setFilteredItems] = useState(data);
   const [cart, addToCart] = useState("");
-  console.log(cart);
   const [searchTerm, setSearchTerm] = useState("");
-  const [notify, setNotify] = useState(false);
-
-  useEffect(() => {
-    if (notify) {
-      const timer = setTimeout(() => setNotify(false), 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [notify]);
 
   const handleInput = (e) => {
     e.preventDefault();
@@ -35,49 +28,38 @@ const ProductGrid = ({ data }) => {
 
     setFilteredItems(filteredterms);
 
-    if (searchWord.length > 0) {
-      setCheckInput(true);
-    } else {
-      setCheckInput(false);
-    }
+    setCheckInput(searchWord.length > 0);
   };
 
   const removeSearch = () => {
     setSearchTerm("");
     setFilteredItems(data);
     setCheckInput(false);
-    console.log(filteredItems);
   };
 
-  const handleCart=(item)=>{
-     dispatch({ type: "ADD", payload: item })
-     setNotify(true);
-  }
-
-  
+  const handleCart = (item) => {
+    dispatch({ type: "ADD", payload: item });
+    toast.success("Item added to cart!"); // Notify user
+  };
 
   const GlobalState = useContext(CartContext);
   const dispatch = GlobalState.dispatch;
 
   return (
     <div className="border-[1px]">
-      {notify && (
-        <p className="z-[1000] p-6 rounded text-sm fixed w-[100%] top-0 bg-black text-white text-center">
-          Product has been added to your cart
-        </p>
-      ) }
+      <ToastContainer />
 
       <div className="mx-auto my-8 md:my-[5rem] px-[2rem] max-w-[1200px] flex flex-col gap-10">
         <div
           className="flex flex-col gap-4 justify-between items-center
       lg:flex-row md:flex-row  "
         >
-          <div className=" py-2 border-[1px] border-black px-2 rounded-md flex items-center justify-center ">
+          <div className="py-2 border-[1px] border-black px-2 rounded-md flex items-center justify-center">
             <input
               value={searchTerm}
               type="text"
               className="bg-transparent self-start outline-none w-[80%] md:w-[100%]"
-              placeholder="search product"
+              placeholder="Search product"
               onChange={handleInput}
             />
             {CheckInput ? (
@@ -90,7 +72,7 @@ const ProductGrid = ({ data }) => {
           </div>
 
           <div className="">
-            <ul className="flex gap-6 text-sm md:text-md cursor-pointer ">
+            <ul className="flex gap-6 text-sm md:text-md cursor-pointer">
               <li className="hover:underline">All </li>
               <li className="hover:underline">Best Sellers</li>
               <li className="hover:underline">Sales Products</li>
@@ -98,12 +80,12 @@ const ProductGrid = ({ data }) => {
           </div>
         </div>
 
-        <section className="section  cursor-pointer overflow-hidden">
+        <section className="section cursor-pointer overflow-hidden">
           {filteredItems.length > 0 ? (
             filteredItems.map((item, id) => (
-              <div key={id} className="flex flex-col gap-4  ">
+              <div key={id} className="flex flex-col gap-4">
                 <div
-                  className="overflow-hidden relative  bg-white w-[100%] h-[300px] flex flex-col  justify-center items-center shadow
+                  className="overflow-hidden relative bg-white w-[100%] h-[300px] flex flex-col justify-center items-center shadow
                 hover:shadow-md
                 hover:shadow-gray-400 "
                   key={id}
@@ -114,14 +96,14 @@ const ProductGrid = ({ data }) => {
                   />
                   <button
                     ref={cartRef}
-                    onClick={()=>handleCart(item)}
+                    onClick={() => handleCart(item)}
                     className="
                    cursor-pointer
                    outline-none
                    active:bg-black
                   transition-colors duration-1
                   active:text-white
-                         flex gap-2 justify-center items-center w-[80%]  absolute bottom-4 rounded py-2 bg-[#fff000] "
+                         flex gap-2 justify-center items-center w-[80%] absolute bottom-4 rounded py-2 bg-[#fff000] "
                   >
                     <BsHandbag />
                     <div className="text-center">Add to Cart</div>
@@ -131,7 +113,6 @@ const ProductGrid = ({ data }) => {
                 <div className="flex flex-col items-center justify-center gap-2">
                   <h2 className="uppercase font-bold">{item.name}</h2>
                   <p className="text-opacity">N{item.price.toLocaleString()}</p>
-                  {/* adding comma format to an init */}
                 </div>
               </div>
             ))

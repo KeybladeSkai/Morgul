@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import "../../styles/Header/header.css";
 import Cart from "./Cart";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 import SideBar from "./SideBar";
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const { state } = useContext(CartContext);
+  const cartCount = state.length;
 
   const [menu, setMenu] = useState(false);
   useEffect(() => {
@@ -29,7 +32,9 @@ const Header = () => {
         <Link to="/newCollection">
           <h2 className="hover:underline py-1 px-2 ">COLLECTIONS</h2>
         </Link>
-        <h2 className="hover:underline">ARTIST WEARS</h2>
+        <Link to="/newCollection">
+          <h2 className="hover:underline">ARTIST WEARS</h2>
+        </Link>
       </div>
       {/* <input
         type="text"
@@ -40,7 +45,9 @@ const Header = () => {
       <div className="cursor-pointer flex gap-4 justify-center items-center">
         <button onClick={() => setOpen((prev) => !prev)} className="relative">
           <BsCart3 className="text-xl cursor-pointer md:block lg:block block" />
-          <div className="red w-[15px] h-[15px] bg-[#fff000] rounded-full absolute top-[-5px] right-[-5px] text-[.5rem] text-center flex justify-center items-center ">1</div>
+          <div className="red w-[15px] h-[15px] bg-[#fff000] rounded-full absolute top-[-5px] right-[-5px] text-[.5rem] text-center flex justify-center items-center ">
+            {cartCount}
+          </div>
         </button>
         <IoMdContact className="hidden text-2xl cursor-pointer md:block" />
         <button

@@ -1,6 +1,7 @@
 import "../../styles/Features/Features.css";
 import FeaturesImage from "../../Data/FeatureImages";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Features = () => {
   return (
@@ -45,9 +46,11 @@ const Features = () => {
         </span>
 
         <button className="text-[1rem] md:text-[16px] font-normal flex items-center">
-          <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
-            Shop
-          </button>
+          <Link to="/newCollection">
+            <button className="rounded-md border-2 border-black text-white py-2 px-1 font-bold bg-black w-[8rem]  hover:border-black hover:bg-white hover:text-black hover:transition-all hover:ease-in transition-all ease-in-out ">
+              Shop
+            </button>
+          </Link>
         </button>
       </h1>
     </div>

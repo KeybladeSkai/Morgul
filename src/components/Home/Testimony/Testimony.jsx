@@ -6,7 +6,7 @@ const Testimony = () => {
      
           Connecting people with cool products that not only looks good, but levels up your daily life.
 
-  
+ 
       </p>
     </div>
   );
